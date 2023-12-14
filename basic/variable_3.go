@@ -12,6 +12,7 @@ func main() {
 	// %d:decimal %s:string %f:float %T:type
 	var a int = 10
 	var b string = "Hello"
+	// fmt.Sprintf: 支援複雜格式輸出，不會自動加換行
 	var c string = fmt.Sprintf("%d_%s", a, b)
 
 	// fmt.Println: 不支援複雜格式輸出，會自動加換行，加入空格
