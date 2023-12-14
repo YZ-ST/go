@@ -6,16 +6,22 @@ import (
 	"fmt"
 )
 
-// 宣告變數
-var variable_test string = "variable_test"
-var variable_test_2 string = "variable_test_2"
-var variable_test_3 string = "3"
-
-var number_test1 int = 1
-var number_test2 int = 2
 
 // main() go 的進入點(會顯找pagkage main 的 main() 作為進入點)
 func main() {
-	fmt.Println(variable_test + "\n" + variable_test_2) // 字串相加
-	// fmt.Println(number_test1 + variable_test_3) // 字串與數字不能相加
+	// %d:decimal %s:string %f:float %T:type
+	var a int = 10
+	var b string = "Hello"
+	// fmt.Sprintf: 支援複雜格式輸出，不會自動加換行
+	var c string = fmt.Sprintf("%d_%s", a, b)
+
+	// fmt.Println: 不支援複雜格式輸出，會自動加換行，加入空格
+	fmt.Println(c)
+
+	// fmt.Printf: 支援複雜格式輸出，不會自動加換行
+	fmt.Printf(c)
+
+	// type of a
+	fmt.Printf("\n%T\n", a)
+	fmt.Println("%T", a)
 }
